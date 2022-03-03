@@ -1,6 +1,20 @@
 import geopandas as gpd
 from greppo import app
 
+app.display(name="Title", value='Kenyan Counties, and Road Network')
+app.display(
+    name='description',
+    value='A base app for vector data using GeoJSON data'
+)
+
+text_1 = """
+## About the web-app
+The dashboard shows the boundaries of the countirs of Kenya as polygons, and 
+the major arterial highways as lines.
+"""
+
+app.display(name='text-1', value=text_1)
+
 counties = gpd.read_file("./kenyan-counties.geojson")
 roads = gpd.read_file("/Users/jobdulo/Documents/geo_data/Kenya_roads.json")
 
