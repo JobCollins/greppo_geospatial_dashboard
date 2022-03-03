@@ -32,6 +32,12 @@ app.vector_layer(
     style = {"fillColor":"#377eb8"}
 )
 
+app.display(name='text-2',
+            value='The following displays the count of polygons, lines and points as a barchart.')
+
+app.bar_chart(name='Geometry count', description='A bar-cart showing the count of each geometry-type in the datasets.',
+              x=['polygons', 'lines (x1000)'], y=[len(counties), len(roads)/1000], color='#984ea3')
+
 app.base_layer(
     name="Open Stree Map",
     visible=True,
